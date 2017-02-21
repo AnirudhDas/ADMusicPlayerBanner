@@ -1,6 +1,6 @@
 //
 //  MusicPlayerHelper.swift
-//  MusicPlayer
+//  ADMusicPlayerBanner
 //
 //  Created by Aniruddha Das on 2/21/17.
 //  Copyright © 2017 Aniruddha Das. All rights reserved.
@@ -11,21 +11,21 @@ import Gloss
 
 public struct Properties: Decodable {
     
-    let playerBackgroundColor: String?
-    let playerAlpha: CGFloat?
-    let musicTitleColor: String?
-    let tableViewBackgroundColor: String?
-    let tableViewCellBackgroundColor: String?
-    let tableViewCellLabelSelectedColor: String?
-    let tableViewCellLabelColor: String?
-    let timerLabelColor: String?
-    let pauseImageName: String?
-    let playImageName: String?
-    let prevImageName: String?
-    let nextImageName: String?
-    let cancelImageName: String?
-    let downImageName: String?
-    let placeholderImgString: String?
+    public let playerBackgroundColor: String?
+    public let playerAlpha: CGFloat?
+    public let musicTitleColor: String?
+    public let tableViewBackgroundColor: String?
+    public let tableViewCellBackgroundColor: String?
+    public let tableViewCellLabelSelectedColor: String?
+    public let tableViewCellLabelColor: String?
+    public let timerLabelColor: String?
+    public let pauseImageName: String?
+    public let playImageName: String?
+    public let prevImageName: String?
+    public let nextImageName: String?
+    public let cancelImageName: String?
+    public let downImageName: String?
+    public let placeholderImgString: String?
     
     public init?(json: JSON) {
         self.playerBackgroundColor = "playerBackgroundColor" <~~ json
@@ -69,13 +69,13 @@ public struct Properties: Decodable {
 
 public struct Icons: Decodable {
     
-    let pauseImageName: String?
-    let playImageName: String?
-    let prevImageName: String?
-    let nextImageName: String?
-    let cancelImageName: String?
-    let downImageName: String?
-    let placeholderImgString: String?
+    public let pauseImageName: String?
+    public let playImageName: String?
+    public let prevImageName: String?
+    public let nextImageName: String?
+    public let cancelImageName: String?
+    public let downImageName: String?
+    public let placeholderImgString: String?
     
     public init?(json: JSON) {
         self.pauseImageName = "pauseImageName" <~~ json
@@ -103,8 +103,8 @@ public struct Icons: Decodable {
 
 public struct MusicPlayerConfig: Decodable {
     
-    let properties : Properties?
-    let icons: Icons?
+    public let properties : Properties?
+    public let icons: Icons?
     
     public init?(json: JSON) {
         self.properties = "properties" <~~ json

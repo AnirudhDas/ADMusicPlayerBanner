@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "ADMusicPlayerBanner"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "This music player component gives a banner view for play, pause, previous, next and cancel options."
 
   s.description  = "This music player component gives a banner view for play, pause, previous, next and cancel options. It also gives an enlarging and collapsing effect."

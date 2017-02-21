@@ -1,6 +1,6 @@
 //
-//  MusicPlayer.swift
-//  MusicPlayer
+//  AudioManager.swift
+//  ADMusicPlayerBanner
 //
 //  Created by Aniruddha Das on 1/24/17.
 //  Copyright © 2017 Aniruddha Das. All rights reserved.

@@ -1,6 +1,6 @@
 //
-//  MusicPlayer.swift
-//  MusicPlayer
+//  ADMusicPlayerBanner.swift
+//  ADMusicPlayerBanner
 //
 //  Created by Aniruddha Das on 1/24/17.
 //  Copyright © 2017 Aniruddha Das. All rights reserved.
@@ -11,7 +11,7 @@ import MarqueeLabel
 import AVFoundation
 import SDWebImage
 
-public class MusicPlayer: UIViewController {
+public class ADMusicPlayerBanner: UIViewController {
     
     var isFirstTime: Bool = false
     var shouldDisplay: Bool = false
@@ -465,7 +465,7 @@ public class MusicPlayer: UIViewController {
     func startTimer() {
         timer?.invalidate()
         timer = nil
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(MusicPlayer.updateTimerLabel), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ADMusicPlayerBanner.updateTimerLabel), userInfo: nil, repeats: true)
     }
     
     func stopTimer() {
@@ -530,7 +530,7 @@ public class MusicPlayer: UIViewController {
     
 }
 
-extension MusicPlayer: UITableViewDataSource {
+extension ADMusicPlayerBanner: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.songTitleArray.count
     }
@@ -588,7 +588,7 @@ extension MusicPlayer: UITableViewDataSource {
     
 }
 
-extension MusicPlayer: UITableViewDelegate {
+extension ADMusicPlayerBanner: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Podcast selected at \(indexPath.row)")
         if indexPath.row == self.currentlyPlayingSongIndex {
@@ -603,7 +603,7 @@ extension MusicPlayer: UITableViewDelegate {
     }
 }
 
-extension MusicPlayer {
+extension ADMusicPlayerBanner {
     func showErrorMessage(title: String,
                           message: String,
                           viewController: UIViewController) {
