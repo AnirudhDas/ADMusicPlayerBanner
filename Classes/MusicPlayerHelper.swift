@@ -19,13 +19,6 @@ public struct Properties: Decodable {
     public let tableViewCellLabelSelectedColor: String?
     public let tableViewCellLabelColor: String?
     public let timerLabelColor: String?
-    public let pauseImageName: String?
-    public let playImageName: String?
-    public let prevImageName: String?
-    public let nextImageName: String?
-    public let cancelImageName: String?
-    public let downImageName: String?
-    public let placeholderImgString: String?
     
     public init?(json: JSON) {
         self.playerBackgroundColor = "playerBackgroundColor" <~~ json
@@ -36,13 +29,6 @@ public struct Properties: Decodable {
         self.tableViewCellLabelColor = "tableViewCellLabelColor" <~~ json
         self.tableViewCellLabelSelectedColor = "tableViewCellLabelSelectedColor" <~~ json
         self.timerLabelColor = "timerLabelColor" <~~ json
-        self.pauseImageName = "pauseImageName" <~~ json
-        self.playImageName = "playImageName" <~~ json
-        self.prevImageName = "prevImageName" <~~ json
-        self.nextImageName = "nextImageName" <~~ json
-        self.cancelImageName = "cancelImageName" <~~ json
-        self.downImageName = "downImageName" <~~ json
-        self.placeholderImgString = "placeholderImgString" <~~ json
 
     }
     
@@ -55,14 +41,7 @@ public struct Properties: Decodable {
             "tableViewCellBackgroundColor" ~~> self.tableViewCellBackgroundColor,
             "tableViewCellLabelColor" ~~> self.tableViewCellLabelColor,
             "tableViewCellLabelSelectedColor" ~~> self.tableViewCellLabelSelectedColor,
-            "timerLabelColor" ~~> self.timerLabelColor,
-            "pauseImageName" ~~> self.pauseImageName,
-            "playImageName" ~~> self.playImageName,
-            "prevImageName" ~~> self.prevImageName,
-            "nextImageName" ~~> self.nextImageName,
-            "cancelImageName" ~~> self.cancelImageName,
-            "downImageName" ~~> self.downImageName,
-            "placeholderImgString" ~~> self.placeholderImgString
+            "timerLabelColor" ~~> self.timerLabelColor
             ])
     }
 }
